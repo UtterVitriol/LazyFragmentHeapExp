@@ -89,11 +89,15 @@ int main()
 
 	printf("created: %d\n", GetLastError());
 
-	getchar();
-
-	TerminateProcess(pinfo.hProcess, 0);
+	//getchar();
+	DWORD exit = 0;
+	WaitForSingleObject(pinfo.hProcess, INFINITE);
+	GetExitCodeProcess(pinfo.hProcess, &exit);
+	int err = TerminateProcess(pinfo.hProcess, 0);
 	closesocket(client);
 	closesocket(sock);
 
-	return GetLastError();
+	WSACleanup();
+
+	return err;
 }
