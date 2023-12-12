@@ -13,7 +13,7 @@ int main()
 {
 	char ip[] = "127.0.0.1";
 	char port[] = "6666";
-	char path[] = "cmd /c \"C:\\Users\\uttervitriol\\source\\repos\\LazyFragmentHeapExp\\LazyFragmentationHeap.exe\"";
+	char path[] = "cmd /c \"C:\\Users\\Hacker\\source\\repos\\LazyFragmentHeapExp\\LazyFragmentationHeap.exe\"";
 	WSADATA wsaData;
 	if (WSAStartup(MAKEWORD(2, 2), &wsaData))
 	{
@@ -82,7 +82,7 @@ int main()
 	sinfo.hStdOutput = (HANDLE)client;
 	sinfo.hStdError = (HANDLE)client;
 	PROCESS_INFORMATION pinfo = { 0 };
-	if (!CreateProcessA(NULL, path, NULL, NULL, TRUE, NULL, NULL, "C:\\Users\\uttervitriol\\source\\repos\\LazyFragmentHeapExp\\", &sinfo, &pinfo))
+	if (!CreateProcessA(NULL, path, NULL, NULL, TRUE, NULL, NULL, "C:\\Users\\Hacker\\source\\repos\\LazyFragmentHeapExp\\", &sinfo, &pinfo))
 	{
 		puts("createprocessa");
 	}
