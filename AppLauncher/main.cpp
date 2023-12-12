@@ -74,7 +74,7 @@ int main()
 		return 1;
 	}
 
-
+	FILE;
 	STARTUPINFOA sinfo = { 0 };
 	sinfo.cb = sizeof(sinfo);
 	sinfo.dwFlags = (STARTF_USESTDHANDLES);
